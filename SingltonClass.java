@@ -10,7 +10,7 @@ public class SingltonClass {
 
     //if instance does not exist when requested -> create it
     //allow public access to the 1 instance
-    public static SingltonClass getInstance(){
+    public synchronized static SingltonClass getInstance(){
         if (instance==null)
             instance=new SingltonClass("hodi");
         return instance;
